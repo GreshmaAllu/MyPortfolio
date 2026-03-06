@@ -8,13 +8,11 @@ const Experience = () => {
         {
             role: 'Graphic Designer',
             company: 'Oasis Infobyte',
-            duration: 'July 2024 – August 2024',
             description: 'Focused on visual design, branding, and user-focused creative development using Figma and Canva. Engaged in industry workflows.'
         },
         {
             role: 'Web Development Intern',
             company: 'InternPe',
-            duration: 'May 2024 – June 2024',
             description: 'Transformed UI designs into functional, responsive web pages using HTML, CSS, and JavaScript with emphasis on layout implementation.'
         }
     ];
@@ -46,7 +44,6 @@ const Experience = () => {
                                 <div className="timeline-icon">
                                     <Briefcase size={20} />
                                 </div>
-                                <div className="timeline-date">{exp.duration}</div>
                                 <h3>{exp.role}</h3>
                                 <h4>{exp.company}</h4>
                                 <p>{exp.description}</p>

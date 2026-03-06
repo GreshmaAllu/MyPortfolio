@@ -1,0 +1,145 @@
+.resume-preview-section {
+    background: rgba(10, 10, 10, 0.5);
+    padding: 6rem 0;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+    color: var(--color-text-secondary);
+    margin-top: -1rem;
+    font-size: 1.1rem;
+}
+
+.resume-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.resume-paper-wrapper {
+    width: 100%;
+    max-width: 850px;
+    perspective: 1000px;
+}
+
+.resume-paper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1.414;
+    background: #ffffff;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(6, 182, 212, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+/* Fallback for browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 1 / 1.414) {
+    .resume-paper {
+        padding-top: 141.4%;
+    }
+}
+
+.resume-preview-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.resume-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.resume-paper:hover .resume-overlay {
+    opacity: 1;
+}
+
+.resume-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 110px;
+}
+
+.action-btn:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+.action-btn span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.resume-mobile-actions {
+    display: none;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .resume-paper-wrapper {
+        max-width: 90%;
+    }
+
+    .resume-overlay {
+        display: none;
+    }
+
+    .resume-mobile-actions {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-paper-wrapper {
+        max-width: 100%;
+    }
+
+    .resume-mobile-actions {
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+
+    .resume-mobile-actions .btn {
+        width: 100%;
+    }
+}

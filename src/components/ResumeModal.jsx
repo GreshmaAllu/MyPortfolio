@@ -8,38 +8,52 @@ const ResumeModal = ({ isOpen, onClose, resumeFile }) => {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    className="resume-modal-overlay"
+                    className="resume-view-overlay"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    onClick={onClose}
                 >
-                    <motion.div
-                        className="resume-modal-container"
-                        initial={{ scale: 0.8, opacity: 0, y: 50 }}
-                        animate={{ scale: 1, opacity: 1, y: 0 }}
-                        exit={{ scale: 0.8, opacity: 0, y: 50 }}
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <div className="resume-modal-header">
-                            <h3>My Resume</h3>
-                            <div className="resume-modal-actions">
-                                <a href={resumeFile} download className="modal-action-btn" title="Download Resume">
-                                    <Download size={20} />
-                                </a>
-                                <button className="modal-close-btn" onClick={onClose} title="Close">
-                                    <X size={24} />
-                                </button>
-                            </div>
+                    <div className="resume-view-header">
+                        <div className="resume-view-title">
+                            <h3>Resume View</h3>
                         </div>
-                        <div className="resume-modal-body">
+                        <div className="resume-view-actions">
+                            <a
+                                href={resumeFile}
+                                download="Greshma_Allu_Resume.jpg"
+                                className="resume-btn resume-download-btn"
+                                title="Download Resume"
+                            >
+                                <Download size={20} />
+                                <span>Download</span>
+                            </a>
+                            <button
+                                className="resume-btn resume-close-btn"
+                                onClick={onClose}
+                                title="Close"
+                            >
+                                <X size={24} />
+                                <span>Close</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="resume-view-body" onClick={onClose}>
+                        <motion.div
+                            className="resume-view-paper"
+                            initial={{ scale: 0.9, opacity: 0, y: 30 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 30 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
                             <img
                                 src={resumeFile}
                                 alt="Greshma Allu Resume"
-                                className="resume-jpg"
+                                className="resume-view-img"
                             />
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

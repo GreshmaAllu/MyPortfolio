@@ -1,16 +1,51 @@
-# React + Vite
+# Allu Greshma | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance, and visually stunning portfolio website built with **React** and **Vite**. This project showcases my work as a **UI/UX Designer** and **AI-driven Frontend Developer**, featuring smooth animations, realistic previews, and a premium dark-themed aesthetic.
 
-Currently, two official plugins are available:
+## ✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **🚀 Interactive Hero Section**: Features dynamic text animations and a unique blob background effect.
+- **📄 Pro Resume View**: A dedicated, full-screen resume preview with a realistic **A4 paper sheet** presentation, supporting direct downloads.
+- **🛠️ Dynamic Skills Marquee**: An animated dual-row marquee displaying a curated list of design and development tools with neon glow effects.
+- **📂 Categorized Projects**: Organized showcase of "Design Works" and "Tech Projects" with glassmorphism cards and hover interactions.
+- **📱 Fully Responsive**: Optimized for seamless experiences across Desktop, Tablet, and Mobile devices.
+- **✉️ Contact Integration**: Functional contact form powered by **Web3Forms** for direct communication.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Core**: [React 19](https://react.dev/)
+- **Bundler**: [Vite 7](https://vitejs.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Modern Vanilla CSS (Glassmorphism, CSS Variables, Flex/Grid)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/GreshmaAllu/portfolio.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+## 🎨 Design Philosophy
+
+This portfolio follows a **Geometric dark-theme** aesthetic, utilizing high contrast, subtle gradients, and micro-interactivity to create a premium digital experience. It emphasizes clarity, speed, and visual storytelling.
+
+---
+© 2026 Allu Greshma. Designed & Developed with 💙.

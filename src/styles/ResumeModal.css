@@ -101,7 +101,7 @@
 
 @media (max-width: 768px) {
     .resume-view-header {
-        padding: 1rem;
+        padding: 0.8rem 1.2rem;
     }
 
     .resume-view-title {
@@ -114,19 +114,28 @@
 
     .resume-btn {
         padding: 0.6rem;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
     }
 
     .resume-view-body {
-        padding: 2rem 1rem;
+        padding: 1.5rem 0.8rem;
     }
 
     .resume-view-paper {
-        max-width: 95%;
+        max-width: 98%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 }
 
 @media (max-width: 480px) {
     .resume-view-paper {
         max-width: 100%;
+        border-radius: 0;
+    }
+
+    .resume-view-header {
+        background: var(--color-bg-primary);
     }
 }

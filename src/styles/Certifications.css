@@ -71,3 +71,36 @@
     color: var(--color-text-secondary);
     font-size: 0.9rem;
 }
+
+@media (max-width: 1024px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .cert-image {
+        height: 180px;
+    }
+
+    .cert-info {
+        padding: 1.2rem;
+    }
+
+    .cert-info h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-image {
+        height: 160px;
+    }
+}

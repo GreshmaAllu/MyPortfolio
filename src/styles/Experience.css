@@ -87,15 +87,22 @@
     line-height: 1.5;
 }
 
+@media (max-width: 1024px) {
+    .timeline {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .timeline::after {
-        left: 31px;
+        left: 20px;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 50px;
+        padding-right: 0;
+        margin-bottom: 2rem;
     }
 
     .timeline-item:nth-child(even) {
@@ -107,7 +114,31 @@
     }
 
     .timeline-icon {
-        left: -50px !important;
+        left: 0 !important;
         right: auto;
+        width: 40px;
+        height: 40px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content {
+        padding: 1.2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
     }
 }

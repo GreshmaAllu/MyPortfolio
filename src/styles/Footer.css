@@ -42,4 +42,19 @@
     color: var(--color-text-secondary);
     font-size: 0.9rem;
     opacity: 0.7;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2.5rem 0;
+    }
+
+    .footer-container {
+        gap: 1.2rem;
+    }
+
+    .footer-social {
+        gap: 1.2rem;
+    }
 }

@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 768px) {
+    .marquee-container {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
 
     .marquee-container::before,
     .marquee-container::after {
@@ -85,5 +89,22 @@
 
     .skill-badge {
         padding: 0.6rem 1.2rem;
+        gap: 0.6rem;
+    }
+
+    .skill-badge span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 2.5rem;
+    }
+
+    .skill-badge {
+        padding: 0.5rem 1rem;
     }
 }

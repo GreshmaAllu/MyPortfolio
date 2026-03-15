@@ -14,6 +14,7 @@ import musicApp from '../assets/images/Ui challenges/Music App.png';
 import virtualClassroom from '../assets/images/Ui challenges/Virtual Classroom.png';
 
 // Design Tasks
+import growthForImpact from '../assets/images/Design Tasks/Growth For Impact.jpg';
 import goPratleDesign from '../assets/images/Design Tasks/GoPratle design Task.jpg';
 import docoPrint from '../assets/images/Design Tasks/DocoPrint Task.jpg';
 import rabloDesign from '../assets/images/Design Tasks/Rablo’s Design task.jpg';
@@ -32,7 +33,7 @@ import artifexVideo from '../assets/images/Tech Projects/Artifex ecommerce.mp4';
 
 const MyWorks = () => {
     const [activeTab, setActiveTab] = useState('all');
-    const [activeSubTab, setActiveSubTab] = useState('ui-challenges');
+    const [activeSubTab, setActiveSubTab] = useState('design-tasks');
     const [selectedItem, setSelectedItem] = useState(null);
     const [modalType, setModalType] = useState(null); // 'image' or 'video'
 
@@ -43,13 +44,20 @@ const MyWorks = () => {
     ];
 
     const designSubTabs = [
-        { id: 'ui-challenges', label: 'UI Challenges' },
         { id: 'design-tasks', label: 'Design Tasks' },
+        { id: 'ui-challenges', label: 'UI Challenges' },
         // { id: 'case-studies', label: 'Case Studies' },
         { id: 'graphic-design', label: 'Graphic Design' }
     ];
 
     const designWorks = [
+        // Design Tasks
+        { id: 23, title: 'Growth for Impact', image: growthForImpact, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'Job platform for sustainability users.' },
+        { id: 22, title: 'GoPratle Design Task', image: goPratleDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'Innovative design concepts for GoPratle.' },
+        { id: 8, title: 'DocoPrint Task', image: docoPrint, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'A comprehensive document printing solution.' },
+        { id: 20, title: 'Rablo’s Design Task', image: rabloDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'Creative design solutions for Rablo.' },
+        { id: 21, title: 'Suprazo Design Task', image: suprazoDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'UI/UX enhancements for Suprazo.' },
+
         // UI Challenges
         { id: 1, title: 'Ecommerce Landing Page', image: ecommerceLanding, category: 'ui-challenges', type: 'design', badge: 'UI Challenge', description: 'Modern shopping experience.' },
         { id: 2, title: 'Ecommerce Checkout', image: ecommerceCheckout, category: 'ui-challenges', type: 'design', badge: 'UI Challenge', description: 'Streamlined checkout flow.' },
@@ -58,12 +66,6 @@ const MyWorks = () => {
         { id: 17, title: 'Illustrations', image: illustrations, category: 'ui-challenges', type: 'design', badge: 'UI Challenge', description: 'Custom vector illustrations.' },
         { id: 18, title: 'Music App', image: musicApp, category: 'ui-challenges', type: 'design', badge: 'UI Challenge', description: 'Immersive music player interface.' },
         { id: 19, title: 'Virtual Classroom', image: virtualClassroom, category: 'ui-challenges', type: 'design', badge: 'UI Challenge', description: 'Distance learning platform.' },
-
-        // Design Tasks
-        { id: 22, title: 'GoPratle Design Task', image: goPratleDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'Innovative design concepts for GoPratle.' },
-        { id: 8, title: 'DocoPrint Task', image: docoPrint, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'A comprehensive document printing solution.' },
-        { id: 20, title: 'Rablo’s Design Task', image: rabloDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'Creative design solutions for Rablo.' },
-        { id: 21, title: 'Suprazo Design Task', image: suprazoDesign, category: 'design-tasks', type: 'design', badge: 'Design Task', description: 'UI/UX enhancements for Suprazo.' },
 
         // Graphic Design (Logos)
         { id: 12, title: 'Artifex Website Logo', image: artifexLogo, category: 'graphic-design', type: 'design', badge: 'Graphic Design', description: 'Brand identity for Artifex.' },

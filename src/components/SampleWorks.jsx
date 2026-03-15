@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/SampleWorks.css';
 
 // Importing images
+import growthForImpact from '../assets/images/Design Tasks/Growth For Impact.jpg';
 import docoPrint from '../assets/images/Design Tasks/DocoPrint Task.jpg';
 
 import ecommerceLanding from '../assets/images/Ui challenges/Ecommerce Landing Page.png';
@@ -36,6 +37,12 @@ const SampleWorks = () => {
     }, [closeModal]);
 
     const designTasks = [
+        {
+            title: 'Growth for Impact',
+            image: growthForImpact,
+            category: 'Design Task',
+            description: 'Designing a simple and clear job platform for different types of sustainability-focused users.'
+        },
         {
             title: 'DocoPrint Task',
             image: docoPrint,

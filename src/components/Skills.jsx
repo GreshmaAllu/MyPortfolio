@@ -7,27 +7,38 @@ const Skills = () => {
     const row1Skills = [
         { name: 'Design Thinking', icon: <Layers size={20} /> },
         { name: 'User Research', icon: <Layout size={20} /> },
-        { name: 'Visual Design', icon: <Palette size={20} /> },
         { name: 'Wireframing', icon: <PenTool size={20} /> },
         { name: 'Prototyping', icon: <Smartphone size={20} /> },
         { name: 'User Flow Design', icon: <Layers size={20} /> },
         { name: 'Information Architecture', icon: <Database size={20} /> },
+        { name: 'Usability Testing', icon: <Smartphone size={20} /> },
     ];
 
     const row2Skills = [
+        { name: 'Visual Design', icon: <Palette size={20} /> },
+        { name: 'Interaction Design', icon: <Layers size={20} /> },
+        { name: 'Responsive Design', icon: <Smartphone size={20} /> },
+        { name: 'Design Systems', icon: <Database size={20} /> },
+        { name: 'Microinteractions', icon: <Palette size={20} /> },
+        { name: 'Mobile App Design', icon: <Smartphone size={20} /> },
+    ];
+
+    const row3Skills = [
         { name: 'Figma', icon: <Figma size={20} /> },
+        { name: 'FigJam', icon: <PenTool size={20} /> },
+        { name: 'Notion', icon: <Layout size={20} /> },
         { name: 'Canva', icon: <PenTool size={20} /> },
         { name: 'VS Code', icon: <Code size={20} /> },
         { name: 'GitHub', icon: <Terminal size={20} /> },
-        { name: 'AI Tools', icon: <Terminal size={20} /> },
         { name: 'HTML', icon: <Code size={20} /> },
         { name: 'CSS', icon: <Palette size={20} /> },
-        { name: 'JavaScript', icon: <Code size={20} /> },
+        { name: 'AI Tools', icon: <Terminal size={20} /> },
     ];
 
     // Doubling the lists for seamless infinite loop
     const fullRow1 = [...row1Skills, ...row1Skills, ...row1Skills];
     const fullRow2 = [...row2Skills, ...row2Skills, ...row2Skills];
+    const fullRow3 = [...row3Skills, ...row3Skills, ...row3Skills];
 
     return (
         <section id="skills" className="section skills-section">
@@ -76,6 +87,26 @@ const Skills = () => {
                         >
                             {fullRow2.map((skill, i) => (
                                 <div key={`r2-${i}`} className="skill-badge">
+                                    {skill.icon}
+                                    <span>{skill.name}</span>
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
+
+                    {/* Row 3: Leftward */}
+                    <div className="marquee-row">
+                        <motion.div
+                            className="marquee-track"
+                            animate={{ x: [0, -1000] }}
+                            transition={{
+                                duration: 25,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                        >
+                            {fullRow3.map((skill, i) => (
+                                <div key={`r3-${i}`} className="skill-badge">
                                     {skill.icon}
                                     <span>{skill.name}</span>
                                 </div>
